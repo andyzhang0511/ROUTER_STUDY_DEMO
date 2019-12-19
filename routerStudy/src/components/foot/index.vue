@@ -2,13 +2,13 @@
     <footer id="foot">
         <ul>
             <router-link tag="li" to="/movie">
-                <p>电影</p>
+                <p>一级路由1</p>
             </router-link>
             <router-link tag="li" to="/cinema">
-                <p>影院</p>
+                <p>一级路由2</p>
             </router-link>
             <router-link tag="li" to="/mine">
-                <p>我的</p>
+                <p>一级路由3</p>
             </router-link>
         </ul>
     </footer>

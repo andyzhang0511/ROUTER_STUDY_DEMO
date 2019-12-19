@@ -3,8 +3,8 @@
         <Header></Header>
         <div class="movie_menu">
             <div class="hot_swtich">
-                <router-link tag="div" to=/movie/nowPlaying class="hot_item">正在热映</router-link>
-                <router-link tag="div" to=/movie/comingSoon class="hot_item">即将上映</router-link>
+                <router-link tag="div" to=/movie/nowPlaying class="hot_item">二级路由1</router-link>
+                <router-link tag="div" to=/movie/comingSoon class="hot_item">二级路由2</router-link>
             </div>
         </div>
          <!-- 二级路由渲染 -->

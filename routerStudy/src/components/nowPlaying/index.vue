@@ -22,6 +22,15 @@ export default {
         return {
 
         }
+    },
+    methods: {
+        
+    },
+    computed: {
+        
+    },
+    watch: {
+        
     }
 }
 </script>
