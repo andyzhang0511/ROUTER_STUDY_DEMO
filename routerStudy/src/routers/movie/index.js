@@ -10,7 +10,7 @@ export default {
       children: [
         {
           name: "sanjiOne",
-          path: "/movie/nowPlaying/sanjiOne",
+          path: "/movie/nowPlaying/sanjiOne/",//query的写法
           component: () => import("@/components/sanjiOne")
         },
         {
@@ -27,7 +27,7 @@ export default {
     },
     {
       name: "comingSoon",
-      path: "/movie/comingSoon",
+      path: "/movie/comingSoon/:id",//params的写法
       component: () => import("@/components/comingSoon")
     },
     {

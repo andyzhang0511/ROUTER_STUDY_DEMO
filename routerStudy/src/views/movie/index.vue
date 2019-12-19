@@ -3,8 +3,9 @@
         <Header></Header>
         <div class="movie_menu">
             <div class="hot_swtich">
+                <!-- 声明式： -->
                 <router-link tag="div" to=/movie/nowPlaying class="hot_item">二级路由1</router-link>
-                <router-link tag="div" to=/movie/comingSoon class="hot_item">二级路由2</router-link>
+                <router-link tag="div" to=/movie/comingSoon/456 class="hot_item">二级路由2(动态路由界面)</router-link>
             </div>
         </div>
          <!-- 二级路由渲染 -->
@@ -38,7 +39,7 @@ export default {
 .movie_menu .hot_item {
     font-size: 15px;
     color: #666;
-    width: 80px;
+    width: 200px;
     text-align: center;
     margin: 0 12px;
     font-weight: 700;
@@ -54,6 +55,7 @@ export default {
 .movie_menu .hot_swtich {
     display: flex;
     height: 100%;
+    width: 100%;
     line-height: 45px;
 }
 </style>
