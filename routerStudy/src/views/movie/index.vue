@@ -8,11 +8,10 @@
                 <router-link tag="div" to=/movie/comingSoon/456 class="hot_item">二级路由2(动态路由界面)</router-link>
             </div>
         </div>
-         <!-- 二级路由渲染 -->
-            <keep-alive>
-                <router-view />
-            </keep-alive>
+        <!-- 二级路由渲染 -->
+        <router-view></router-view>
         <Footer></Footer>
+        
     </div>
 </template>
 

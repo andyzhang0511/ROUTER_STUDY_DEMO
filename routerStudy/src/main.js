@@ -9,6 +9,7 @@ import '../public/css/common.css'
 
 Vue.config.productionTip = false;
 
+
 /* eslint-disable no-new */
 new Vue({
   router, 

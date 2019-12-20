@@ -2,7 +2,6 @@
     <div id="main">
         <Header></Header>
         <Footer></Footer>
-      
     </div>
 </template>
 

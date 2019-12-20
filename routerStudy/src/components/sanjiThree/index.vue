@@ -1,9 +1,10 @@
 <template>
     <div>
-        <button @click="pushChange">push执行动态路由跳转</button>
-        <button @click="queryChange">query执行动态路由跳转</button>
-        <button @click="replaceChange">replace执行动态路由跳转</button>
-
+        <button @click="pushChange">push执行动态路由跳转</button><br>
+        <button @click="queryChange">query执行动态路由跳转</button><br>
+        <button @click="replaceChange">replace执行动态路由跳转</button><br>
+        <button @click="goBack">go执行动态路由跳转（后退一步）</button>
+        <button @click="goForward">go执行动态路由跳转（前进一步）</button>
     </div>
 </template>
 
@@ -36,13 +37,29 @@ export default {
             console.log(111)
             // this.$router.replace('/movie/comingSoon/1')
             this.$router.replace({ name: 'comingSoon', params: { id: '123' } })
-        }
+        },
         // 总结
         // push和replace的区别
         // push会向 history 栈添加一个新的记录，当用户点击浏览器后退按钮时，可以回到之前的 URL
         // replace导航后不会留下history 记录,即使点击返回按钮也不会回到这个页面
         // params：/router1/:id ，/router1/123，/router1/789 ,这里的id叫做params
         // query：/router1?id=123 ,/router1?id=456 ,这里的id叫做query
+
+        goBack () {
+            // 后退1步，等同于history.back()
+            this.$router.go(-1)
+        },
+        goForward () {
+            // 前进1步，等同于history.forward()
+            this.$router.go(1)
+
+            // 前进3步
+            // this.$router.go(3)
+
+            // 如果 history 记录不够用，那就默默地失败呗
+            // this.$router.go(-100)
+            // this.$router.go(100)
+        }
     },
 }
 </script>

@@ -3,19 +3,22 @@
         <div class="movie_body">
             <div class="movie_menu">
                 <div class="hot_swtich">
-                <router-link tag="div" to=/movie/nowPlaying/sanjiOne class="hot_item">三级路由1</router-link>
-                <router-link tag="div" to=/movie/nowPlaying/sanjiTwo class="hot_item">三级路由2</router-link>
-                <router-link tag="div" to=/movie/nowPlaying/sanjiThree class="hot_item">三级路由3</router-link>
+                    <router-link tag="div" to=/movie/nowPlaying/sanjiOne class="hot_item">三级路由1</router-link>
+                    <router-link tag="div" to=/movie/nowPlaying/sanjiTwo class="hot_item">三级路由2</router-link>
+                    <router-link tag="div" to=/movie/nowPlaying/sanjiThree class="hot_item">三级路由3</router-link>
                 </div>
             </div>
             <!-- 三级路由渲染 -->
             <router-view />
-
+            <!-- 命名视图的使用 -->
+            <router-view name="son" />
         </div>
+
     </div>
 </template>
 
 <script>
+
 export default {
     name: "nowPlaying",
     data () {
@@ -24,13 +27,13 @@ export default {
         }
     },
     methods: {
-        
+
     },
     computed: {
-        
+
     },
     watch: {
-        
+
     }
 }
 </script>

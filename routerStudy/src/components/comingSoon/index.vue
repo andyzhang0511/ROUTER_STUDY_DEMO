@@ -4,7 +4,7 @@
         <p> 1.命名路由搭配params，刷新页面参数会丢失</p>
         <p>2.查询参数搭配query，刷新页面数据不会丢失</p>
         <p>3.接受参数使用this.$router后面就是搭配路由的名称就能获取到参数的值</p>
-        <p>{{b}}</p>
+        <p style="color:red">当前子路由的id值是:  {{b}}</p>
         <!-- <p>{{this.$route.query.id}}</p> -->
 
     </div>
@@ -19,11 +19,12 @@ export default {
     },
     created () {
         console.log(this.$route)// 当前子页面路由信息
-        console.log(this.$router)// 全局路由信息
+        // console.log(this.$router)// 全局路由信息
 
         let a = this
         a.getParams()
     },
+    // 复用组件时，想对路由参数的变化作出响应的话，你可以简单地 watch (监测变化) $route 对象：
     watch: {
         '$route': 'getParams'
     },
