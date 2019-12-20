@@ -44,6 +44,9 @@ $top: top;
 $bottom: bottom;
 $left: left;
 $right: right;
+@function double($n) {
+    @return $n * 2;
+}
 
 // 如果变量需要镶嵌在字符串之中，就必须需要写在#{}之中
 .demo {
@@ -133,14 +136,14 @@ $right: right;
 .demo1 {
     @if 5<3 {
         border: 2px dotted;
-    }
-    @else {
+    } @else {
         border-#{$right}: 3px solid $commonColor;
     }
 }
 .demo3 {
     @if 1<3 {
         border: 2px dotted;
+        width: double(100px);
     }
 }
 .demo5 {
@@ -151,11 +154,5 @@ $right: right;
 
 // 自定义函数
 // sass允许用户编写自己的函数
-@function double($n) {
-    @return $n * 2
-}
-.demo3 {
-  width: double(100px)  
-}
 
 </style>
