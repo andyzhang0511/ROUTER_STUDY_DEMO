@@ -1,12 +1,12 @@
 export default {
   name: "movie",
   path: "/movie",
-  component: () => import("@/views/movie"),
+  component: () => import("@/views/movie"),//路由懒加载简单来说就是延迟加载或按需加载，即在需要的时候的时候进行加载。
   children: [
     {
       name: "nowPlaying",
       path: "/movie/nowPlaying",
-      component: () => import("@/components/nowPlaying"),
+      component: () => import("@/components/nowPlaying"),//路由懒加载，为给客户更好的客户体验，首屏组件加载速度更快一些，解决白屏问题。
       children: [
         {
           // 命名视图的使用
@@ -20,7 +20,7 @@ export default {
         {
           name: "sanjiTwo",
           path: "/movie/nowPlaying/sanjiTwo",
-          component: () => import("@/components/sanjiTwo")
+          component: () => import("@/components/sanjiTwo")//常用的懒加载方式有两种：即使用vue异步组件 和 ES中的import
         },
         {
           name: "sanjiThree",

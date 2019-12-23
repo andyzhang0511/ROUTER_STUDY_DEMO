@@ -4,12 +4,12 @@
         <div class="movie_menu">
             <div class="hot_swtich">
                 <!-- 声明式： -->
-                <router-link tag="div" to=/cinema/cinemaOne/123  class="hot_item">二级路由1</router-link>
-                <router-link tag="div" to=/cinema/cinemaTwo  class="hot_item">二级路由2</router-link>
+                <router-link tag="div" to=/cinema/cinemaOne/123 class="hot_item">二级路由1</router-link>
+                <router-link tag="div" to=/cinema/cinemaTwo class="hot_item">二级路由2(过渡特效)</router-link>
             </div>
         </div>
         <!-- 二级路由渲染 -->
-        <router-view></router-view>
+            <router-view></router-view>
         <Footer></Footer>
     </div>
 </template>
@@ -23,17 +23,17 @@ export default {
         Header,
         Footer
     },
+    watch: {
+       
+    },
     data () {
         return {
-
         }
     },
     methods: {
-        // beforeEach: (to, from, next) => {
-        //     console.log(to)
-        // }
+
     },
-    
+
 }
 </script>
 
@@ -60,4 +60,5 @@ export default {
     width: 100%;
     line-height: 45px;
 }
+
 </style>

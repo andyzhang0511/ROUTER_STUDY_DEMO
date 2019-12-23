@@ -27,7 +27,7 @@ export default {
     },
     mounted() {
         this.num = this.$route.params.testId //123
-        console.log(this.num)
+        // console.log(this.num)
     },
 }
 </script>

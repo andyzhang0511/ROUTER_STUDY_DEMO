@@ -23,6 +23,7 @@ export default {
       name: "cinemaTwo",
       path: "/cinema/cinemaTwo",
       component: () => import("@/components/cinemaTwo"),
+    //   路由独享守卫
     //   beforeEnter: (to, from, next) => {
     //     console.log(to);
     //     // alert(111);

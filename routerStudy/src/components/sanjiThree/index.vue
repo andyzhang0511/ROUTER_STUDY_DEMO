@@ -10,9 +10,37 @@
 
 <script>
 export default {
+    // 组件内的守卫
+
+    // 进入该组件之前被调用，组件实例还没有被创建，不能使用 this关键字
+    // 不过，你可以通过传一个回调给 next来访问组件实例，也就是说可以通过 next 来回调实例化后的组件，用next函数的 vm 参数充当 this
+    // beforeRouteEnter: (to, from, next) => {
+    //     //此时该组件还没被实例化
+    //     // alert(this.info)//弹出框消息为undefined
+    //     next(vm => {
+    //         //此时该组件被实例化了
+    //         alert(vm.info)
+    //     })
+    // },
+    // 离开组件之后调用，可以调用this关键字
+    // beforeRouteLeave (to, from, next) {
+    //     if (confirm("确定离开吗？") == true) {
+    //         next() // 跳转到另一个路由
+    //     } else {
+    //         next(false)//不跳转
+    //     }
+    // },
+    // 该路由参数更新时执行
+    // 举例来说，对于一个带有动态参数的路径 /foo/:id，在 /foo/1 和 /foo/2 之间跳转的时候，
+    // 由于会渲染同样的 Foo 组件，因此组件实例会被复用。而这个钩子就会在这个情况下被调用。
+    // 可以访问组件实例 this
+
+    beforeRouteEUpdata(to,from,next){
+
+    },
     data () {
         return {
-
+            info: '组件内的守卫:beforeRouteEnter进入组件之前'
         }
     },
     methods: {
