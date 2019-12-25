@@ -1,7 +1,7 @@
 <template>
     <div>
         <h1 style="margin-bottom:50px">scss的for循环</h1>
-        <p class="size-1">三级路由111</p>
+        <p class="size-1">三级路由1111</p>
         <p class="size-2">三级路由111</p>
         <p class="size-3">三级路由111</p>
         <p class="size-4">三级路由111</p>
