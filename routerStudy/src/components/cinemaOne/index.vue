@@ -1,9 +1,9 @@
 <template>
     <div>
         <h3 style="color:red">路由组件传参用props</h3>
+        <!-- <h1>路由组件传参(布尔)---{{testId}}</h1> -->
+        <!-- <h1>路由组件传参(对象)---{{name}}</h1> -->
         <h1>{{school}}---{{range}}</h1>
-        <!-- <h1>{{name}}</h1> -->
-        <!-- <h1>{{testId}}</h1> -->
         {{num}}
     </div>
 </template>

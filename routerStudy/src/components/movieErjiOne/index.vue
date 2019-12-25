@@ -3,9 +3,9 @@
         <div class="movie_body">
             <div class="movie_menu">
                 <div class="hot_swtich">
-                    <router-link tag="div" to=/movie/nowPlaying/sanjiOne class="hot_item">三级路由1</router-link>
-                    <router-link tag="div" to=/movie/nowPlaying/sanjiTwo class="hot_item">三级路由2</router-link>
-                    <router-link tag="div" to=/movie/nowPlaying/sanjiThree class="hot_item">三级路由3</router-link>
+                    <router-link tag="div" to=/movie/nowPlaying/movieSanjiOne/ class="hot_item">三级路由1</router-link>
+                    <router-link tag="div" to=/movie/nowPlaying/movieSanjiTwo class="hot_item">三级路由2</router-link>
+                    <router-link tag="div" to=/movie/nowPlaying/movieSanjiThree class="hot_item">三级路由3</router-link>
                 </div>
             </div>
             <!-- 三级路由渲染 -->

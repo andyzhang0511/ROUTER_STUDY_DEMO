@@ -45,9 +45,6 @@ export default {
     flex: 1;
     height: 40px;
 }
-#foot ul li.active {
-    color: #f03d37;
-}
 #foot ul li.router-link-active {
     color: #f03d37;
 }
