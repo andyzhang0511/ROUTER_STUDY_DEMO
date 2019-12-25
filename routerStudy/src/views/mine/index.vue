@@ -5,7 +5,7 @@
             <div class="hot_swtich">
                 <!-- 声明式： -->
                 <router-link tag="div" to=/mine/mineErjiOne class="hot_item">二级路由1(路由元信息)</router-link>
-                <router-link tag="div" to=/mine/mineErjiTwo class="hot_item">二级路由2</router-link>
+                <router-link tag="div" to=/mine/mineErjiTwo class="hot_item">二级路由2(过渡特效)</router-link>
             </div>
         </div>
         <!-- 二级路由渲染 -->
