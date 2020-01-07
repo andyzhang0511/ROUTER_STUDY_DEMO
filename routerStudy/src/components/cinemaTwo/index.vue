@@ -15,14 +15,6 @@
 </template>
 
 <script>
-// 节流函数
-const delay = (function () {
-    let timer = 0;
-    return function (callback, ms) {
-        clearTimeout(timer);
-        timer = setTimeout(callback.ms)
-    }
-})()
 export default {
     name: "cinemaTwo",
     data () {
