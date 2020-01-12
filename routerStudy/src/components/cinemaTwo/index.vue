@@ -2,12 +2,15 @@
     <div>
         vue使用watch监听实现类似百度搜索功能
         <div>
-            <input type="text" class="search" placeholder="搜索" v-model.trim='keyword' />
+            <input type="text" class="search" placeholder="请输入城市名" v-model.trim='keyword' />
         </div>
-        <div v-show="keyword">
+        <div class="search-content" v-show="keyword">
             <ul>
-                <li v-for="item in cityList" :key="item.id" @click="handleCityClick(item.name)">
+                <li v-for="item in cityList" :key="item.id">
                     {{item}}
+                </li>
+                <li v-show="hasNoData">
+                    没有找到匹配数据
                 </li>
             </ul>
         </div>
@@ -37,7 +40,22 @@ export default {
             {
                 'id': 4,
                 'name': '深圳'
-            },]
+            },
+            {
+                'id': 5,
+                'name': '安陆'
+            },
+            {
+                'id': 6,
+                'name': '安徽'
+            }
+            ]
+        }
+    },
+    // computed和watch的用法区别
+    computed: {
+        hasNoData () {
+            return !this.cityList.length
         }
     },
     watch: {

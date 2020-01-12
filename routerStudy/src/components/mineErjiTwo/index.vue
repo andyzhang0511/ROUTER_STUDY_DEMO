@@ -1,19 +1,22 @@
 <template>
     <div>
-        mineErjiTwo
+        异步Promise及Async/Await
     </div>
 </template>
 
 <script>
 export default {
-    data(){
-        return{
+    
+    data () {
+        return {
 
         }
+    },
+    methods: {
+
     }
 }
 </script>
 
 <style lang="scss" scoped>
-    
 </style>
