@@ -1,16 +1,10 @@
 <template>
     <div>
-        vue使用watch监听实现类似百度搜索功能
-        <div>
-            <input type="text" class="search" placeholder="请输入城市名" v-model.trim='keyword' />
-        </div>
-        <div class="search-content" v-show="keyword">
+        <search />
+        <div class="list">
             <ul>
                 <li v-for="item in cityList" :key="item.id">
-                    {{item}}
-                </li>
-                <li v-show="hasNoData">
-                    没有找到匹配数据
+                    {{item.name}}
                 </li>
             </ul>
         </div>
@@ -18,14 +12,15 @@
 </template>
 
 <script>
+import search from './search'
 export default {
     name: "cinemaTwo",
+    components: {
+        search
+    },
     data () {
         return {
-            keyword: '',
-            cityList: [],
-            timer: null,
-            jsonData: [{
+            cityList: [{
                 'id': 1,
                 'name': '北京'
             },
@@ -52,40 +47,20 @@ export default {
             ]
         }
     },
-    // computed和watch的用法区别
-    computed: {
-        hasNoData () {
-            return !this.cityList.length
-        }
-    },
-    watch: {
-        keyword () {
-            //函数节流
-            if (this.timer) {
-                clearTimeout(this.timer)
-            }
-            //删除文字  清零
-            if (!this.keyword) {
-                this.cityList = []
-                return
-            }
-            this.timer = setTimeout(() => {
-                const result = []
-                this.jsonData.forEach(val => {
-                    if (val.name.indexOf(this.keyword) > -1) {
-                        result.push(val.name)
-                    }
-                });
-                this.cityList = result
-                console.log(this.cityList)
-            }, 100)
-        }
-    },
     methods: {
 
     },
 }
 </script>
 
-<style lang="scss" scoped>
+<style  scoped>
+.list {
+    width: 200px;
+    height: 400px;
+    background: #fff;
+    position: absolute;
+    top: 150px;
+    left: 0;
+    z-index: -1;
+}
 </style>
