@@ -6,10 +6,8 @@
         <p>3.接受参数使用this.$router后面就是搭配路由的名称就能获取到参数的值</p>
         <p style="color:red">当前子路由的id值是:  {{b}}</p>
         <!-- <p>{{this.$route.query.id}}</p> -->
-
     </div>
 </template>
-
 <script>
 export default {
     data () {
