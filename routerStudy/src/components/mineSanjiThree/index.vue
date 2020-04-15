@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div class="mineSanjiThree" style="width:200px;height:200px;background-color:red"></div>
+        111
     </div>
 </template>
 
